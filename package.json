@@ -1,0 +1,40 @@
+{
+  "name": "netlify-serverless-functions-biolerplate",
+  "version": "0.0.1",
+  "private": true,
+  "author": "sourav kumar",
+  "email": "souravkumar93@hotmail.com",
+  "scripts": {
+    "build": "run-p build:**",
+    "build:app": "react-scripts build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "start": "REACT_APP_GRAPHQL_URL=http://localhost:9000/graphql react-scripts start",
+    "start:lambda": "netlify-lambda serve src/lambda"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "apollo-server-lambda": "^2.8.1",
+    "encoding": "^0.1.12",
+    "graphql": "^14.4.2",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.3.0",
+    "react": "^16.8.6",
+    "react-apollo": "^3.0.0",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.4.5",
+    "npm-run-all": "^4.1.5"
+  }
+}
